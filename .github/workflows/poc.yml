@@ -1,0 +1,16 @@
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: create table in the summary
+       run: |
+         echo "| Resource name | Resource id | location |" >> $GITHUB_STEP_SUMMARY
+         echo "| vm-1| id1 | east |"  >> $GITHUB_STEP_SUMMARY
+         echo "| vm-2| id2 | west |"  >> $GITHUB_STEP_SUMMARY
