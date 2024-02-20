@@ -12,3 +12,4 @@ jobs:
           echo "The pr is raised on base branch of ${{github.head_ref	}}"
           echo "${{	github.ref}}"
           echo "${{github.ref_name}}"
+          echo "${{github.workflow}}"
