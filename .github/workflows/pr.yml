@@ -7,7 +7,8 @@ jobs:
   pr_raise:
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - name: just work on github env variables
+        run: |
           echo "The pr is raised on target branch of ${{github.base_ref}}"
           echo "The pr is raised on base branch of ${{github.head_ref	}}"
           echo "${{	github.ref}}"
