@@ -1,0 +1,15 @@
+name: pr close workflow
+on:
+  pull_request:
+    types:
+      - closed
+jobs:
+  pr_raise:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "The pr is raised on target branch of ${{github.base_ref}}"
+          echo "The pr is raised on base branch of ${{github.head_ref	}}"
+          echo "${{	github.ref}}"
+          echo "${{github.ref_name}}"
+          echo "${{github.workflow}}"
